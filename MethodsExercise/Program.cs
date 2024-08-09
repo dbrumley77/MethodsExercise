@@ -4,26 +4,27 @@
     {
         static void Main(string[] args)
         {
-            MadLib();
+            //MadLib();
+            Console.WriteLine();
 
-            Add(10,10);
-            Subtract(10, 5);
+            Console.WriteLine(Add(10,10));
+            Console.WriteLine(Subtract(10, 5));
             Multiply(10, 5);
             Divide(10, 5);
 
 
 
         }
-        public static void Add(int num1, int num2)
+        public static int Add(int num1, int num2)
         {
             int answer = num1 + num2;
-            Console.WriteLine(answer);
+            return answer;
         }
 
-        public static void Subtract(int num1, int num2)
+        public static int Subtract(int num1, int num2)
         {
-            int answer = num1 - num2;
-            Console.WriteLine(answer);
+            int answer = num2 - num1;
+            return answer;
         }
 
         public static void Multiply(int num1, int num2)
@@ -57,8 +58,11 @@
                               $"Absorbent and {color} is he. If nautical \n" +
                               $"Nonsense be something you wish. Then drop on the deck \n" +
                               $"and flop like an {animal}. Ready? Spongebob {shape} pants!");
+            Console.WriteLine();
         }
 
 
+
+        
     }
 }

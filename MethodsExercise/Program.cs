@@ -5,21 +5,40 @@
         static void Main(string[] args)
         {
             //MadLib();
-            Console.WriteLine();
+            //Console.WriteLine();
 
-            Console.WriteLine(Add(10,10));
-            Console.WriteLine(Subtract(10, 5));
-            Multiply(10, 5);
-            Divide(10, 5);
+            Console.WriteLine(Add(5,6,9,4));
+            //Console.WriteLine(Subtract(10, 5));
+            //Multiply(10, 5);
+            //Divide(10, 5);
 
+            // Console.WriteLine(SendEmail("dougie@truecoders.io"));
+
+            //Console.WriteLine($"The longest length is {LongestLength(10, 5)}");
+
+            //Console.WriteLine(Add(array));
 
 
         }
-        public static int Add(int num1, int num2)
+
+        public  static bool SendEmail(string emailAddress)
         {
-            int answer = num1 + num2;
-            return answer;
+            if (emailAddress == "cwinton@truecoders.io")
+            {
+                // Send the email and return true, for success
+                return true;
+            }
+            else
+            {
+                // Don't send the email and return false, for failure
+                return false;
+            }
         }
+        //public static int Add(int num1, int num2)
+        //{
+        //    int answer = num1 + num2;
+        //    return answer;
+        //}
 
         public static int Subtract(int num1, int num2)
         {
@@ -62,7 +81,39 @@
         }
 
 
+        public static int AreaAquare(int num1, int num2)
+        {
+            int sgft = num1 * num2;
+            return sgft;
+        }
 
-        
+        public static int LongestLength(int length1, int length2)
+        {
+            
+            if (length1 > length2)
+            {
+                return length1;
+            }
+            else return length2;
+        }
+
+        //static int[] array = new int[] { 2, 3, 4, 5 };
+        public static int Add(params int[] array)
+        {
+            int sum = 0;
+            foreach (var item in array)
+            {
+                sum = sum + item;
+            }
+            return sum;
+        }
+
+        //public static int Add(int number1, int number2)
+        //{
+        //    return number1 + number2;
+        //}
+
+
+
     }
 }
